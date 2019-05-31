@@ -21,10 +21,11 @@
     <div class="contact">
 
       <div class="contactpic">
-        <img src="default.png" width="150px" >
+        <img id ="profilepic" src = "./default.png" width="150px" >
+        
         <div style="text-align:center">
-          <span style="color:white"><i class="fas fa-edit"></i></span>
-          <span style="color:white"><i id="deletebtn" class="fas fa-trash-alt"></i></span>
+          <span style="color:#fb3569"><i id="edit" class="fas fa-edit" onclick="showEditContactModal();"></i></span>
+          <span style="color:#fb3569"><i id="deletebtn" class="fas fa-trash-alt"></i></span>
         </div>
 
       </div>
@@ -38,13 +39,54 @@
 
             </td>
           </tr>
-          <tr>
-            <td>
-              Phone
-            </td>
-            <td id="selectednumber">
-
-            </td>
+            <tr>
+              <td>
+                Address
+              </td>
+              <td id="selectedaddress">
+  
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Company
+              </td>
+              <td id="selectedcompany">
+  
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Cellphone Number
+              </td>
+              <td id="selectedcell">
+  
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Birthday
+              </td>
+              <td id="selectedbirth">
+  
+              </td>
+            </tr>
+            <tr>
+                <td>
+                  Email
+                </td>
+                <td id="selectedemail">
+    
+                </td>
+              </tr>
+              <tr>
+                  <td>
+                    URL
+                  </td>
+                  <td id="selectedurl">
+      
+                  </td>
+                </tr>
           </tr>
         </table>
       </div>

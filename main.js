@@ -11,6 +11,10 @@ ipcMain.on('asynchronous-message', (event, arg) => {
   if (arg == "showModal"){
     showAddContactModal();
   }
+
+  else if(arg =="editModal"){
+    showEditContactModal();
+  }
   else if (arg == "closeAndRefresh"){
     win.webContents.send('asynchronous-message', 'refreshList');
     modal.close();
@@ -29,6 +33,16 @@ function showAddContactModal(){
     modal.show();
   })
 }
+function showEditContactModal(){
+  // create a dialog window for modal inputs
+  modal = new BrowserWindow({parent:win, modal:true, show:false, width:500, height:400, frame:false})
+  modal.loadFile('editContact.html');
+  modal.once('ready-to-show', () => {
+    modal.show();
+  })
+}
+
+
 
 
 function createWindow () {

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="addContact.css">
+</head>
+<body onload="loadPlaceHolders();">
+
+
+  <div class="contactsgroup">
+    <select name="contactedit" id="contactedit" required>
+      </select>
+      </div>
+<form id="editform" style="display:none">
+  <label>Name</label>
+  <input type="text" name="contactname" id="contactname" />
+  <br>
+
+  <label>Address</label>
+  <input type = "text" name="contactaddress" id="contactaddress" />
+  <br>
+  <label>Company</label>
+  <input type = "text" name="contactcompany" id="contactcompany" />
+  <br>
+  <label>Cellphone Number</label>
+  <input type = "text" name="contactcell" id="contactcell" />
+  <br>
+  <label>Birthday</label>
+  <div class="birthdaygroup">
+  <select name="yy" id="yy">
+    <script>
+    var selectTag = document.getElementById("yy");
+  var option = document.createElement("option");
+  var j = "Please select a year";
+  option.value="defaultYear";
+  option.innerHTML=j;
+  selectTag.appendChild(option);
+  for(var i=1920;i<2020;i++){
+    var option = document.createElement("option");
+    option.value=i;
+    option.innerHTML=i;
+    selectTag.appendChild(option);
+  }
+    </script>
+</select>
+  <select name ="mm" id="mm" size="0">
+  <option value="defaultMonth">Please select a month</option>
+  <option value="1">January</option>
+  <option value="2">February</option>
+      <option value="3">March</option>
+      <option value="4">April</option>
+      <option value="5">May</option>
+      <option value="6">June</option>
+      <option value="7">July</option>
+      <option value="8">August</option>
+      <option value="9">September</option>
+      <option value="10">October</option>
+      <option value="11">November</option>
+      <option value="12">December</option>
+    </select>
+  <select name="dd" id="dd" size="0">
+
+  <option value="defaultDay">Please select a day</option>
+  </select>
+  </div>
+  <br>
+  <label>Email</label>
+  <input type = "text" name="contactemail" id="contactemail" />
+  <br>
+  <label>URL</label>
+  <input type = "text" name="contacturl" id="contacturl" />
+  
+  <button id="updatebtn" >Update</button>
+  <button id="cancelbtn">Cancel</button>
+</form>
+<script src="./addressbook.js"></script>
+</body>
+</html>
